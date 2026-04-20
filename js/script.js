@@ -45,16 +45,15 @@ document.documentElement.classList.toggle(
 );
 
 const syncDesktopSiteFlag = () => {
-    const isTouch = navigator.maxTouchPoints && navigator.maxTouchPoints > 0;
-    const vw = window.innerWidth;
-    const sw = Math.min(window.screen.width, window.screen.height); // lato corto
+    const isTouch = (navigator.maxTouchPoints && navigator.maxTouchPoints > 0);
 
-    document.documentElement.classList.toggle('touch-device', !!isTouch);
+    // In Chrome Android, quando attivi "Sito desktop" spesso sparisce "Mobile" dall'User-Agent
+    const ua = navigator.userAgent || "";
+    const uaLooksMobile = /Mobile/i.test(ua);
 
-    // euristica: in "Sito desktop" spesso vw >> sw
-    const isDesktopSite = !!isTouch && (vw >= sw * 1.25);
-    document.documentElement.classList.toggle('desktop-site', isDesktopSite);
+    document.documentElement.classList.toggle("touch-device", isTouch);
+    document.documentElement.classList.toggle("desktop-site", isTouch && !uaLooksMobile);
 };
 
-window.addEventListener('resize', syncDesktopSiteFlag, { passive: true });
+window.addEventListener("resize", syncDesktopSiteFlag, { passive: true });
 syncDesktopSiteFlag();
