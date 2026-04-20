@@ -43,3 +43,18 @@ document.documentElement.classList.toggle(
     'touch-device',
     navigator.maxTouchPoints && navigator.maxTouchPoints > 0
 );
+
+const syncDesktopSiteFlag = () => {
+    const isTouch = navigator.maxTouchPoints && navigator.maxTouchPoints > 0;
+    const vw = window.innerWidth;
+    const sw = Math.min(window.screen.width, window.screen.height); // lato corto
+
+    document.documentElement.classList.toggle('touch-device', !!isTouch);
+
+    // euristica: in "Sito desktop" spesso vw >> sw
+    const isDesktopSite = !!isTouch && (vw >= sw * 1.25);
+    document.documentElement.classList.toggle('desktop-site', isDesktopSite);
+};
+
+window.addEventListener('resize', syncDesktopSiteFlag, { passive: true });
+syncDesktopSiteFlag();

@@ -120,16 +120,16 @@ body.sticky-active {
 }
 
 @media (max-width: 991.98px) {
-    html.touch-device section.mb-5 > .row.g-4:has(> .col-lg-6 + .col-lg-6) {
+    html.desktop-site section.mb-5 > .row.g-4:has(> .col-lg-6 + .col-lg-6) {
         flex-wrap: nowrap;
     }
 
-    html.touch-device section.mb-5 > .row.g-4:has(> .col-lg-6 + .col-lg-6) > .col-lg-6 {
+    html.desktop-site section.mb-5 > .row.g-4:has(> .col-lg-6 + .col-lg-6) > .col-lg-6 {
         flex: 0 0 50%;
         max-width: 50%;
     }
 
-    html.touch-device section.mb-5 > .row.g-4:has(> .col-lg-6 + .col-lg-6) img.img-fluid {
+    html.desktop-site section.mb-5 > .row.g-4:has(> .col-lg-6 + .col-lg-6) img.img-fluid {
         aspect-ratio: 16 / 9;
         object-fit: cover;
         width: 100%;
