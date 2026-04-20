@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Il Post - Layout Completo</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="header-wrapper" id="mainHeader">
+    <header class="border-bottom py-2 bg-white">
+        <div class="container-fluid px-md-5">
+            <div class="row align-items-center">
+                <div class="col d-flex align-items-center gap-3">
+                    <i class="bi bi-list fs-2 cursor-pointer" role="img" aria-label="Apri menu"></i>
+                    <div class="nav-utility-hide d-none d-lg-flex gap-3 small text-secondary fw-bold text-uppercase">
+                        <span>Newsletter</span><span>Podcast</span><span>Cerca</span>
+                    </div>
+                </div>
+                <div class="col-auto">
+                    <img src="https://placehold.co/120x40/000000/FFFFFF?text=IL+POST" alt="Il Post Logo" class="img-fluid">
+                </div>
+                <div class="col d-flex align-items-center justify-content-end gap-3">
+                    <div class="nav-utility-hide d-none d-lg-flex gap-3 small align-items-center">
+                        <span class="fw-bold">Shop</span>
+                        <span class="badge bg-warning text-dark p-2 fw-bold px-3 text-uppercase badge-abbonati" style="cursor:pointer" role="button" aria-label="Abbonati">Abbonati</span>
+                    </div>
+                    <i class="bi bi-person-circle fs-3" role="img" aria-label="Area utente"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <nav class="sub-header py-2 border-bottom bg-white" aria-label="Navigazione per categorie">
+        <div class="container d-flex justify-content-center gap-4 flex-wrap">
+            <a href="#" class="nav-link-custom">Italia</a>
+            <a href="#" class="nav-link-custom">Mondo</a>
+            <a href="#" class="nav-link-custom">Politica</a>
+            <a href="#" class="nav-link-custom">Tecnologia</a>
+            <a href="#" class="nav-link-custom">Cultura</a>
+            <a href="#" class="nav-link-custom">Economia</a>
+        </div>
+    </nav>
+</div>
+
+<main class="container mt-4 mt-md-5">
+
+    <section class="mb-5 border-bottom pb-5">
+        <div class="row g-4 d-flex flex-column d-lg-flex flex-lg-row">
+            <div class="col-12 col-lg-5 order-1">
+                <span class="text-danger fw-bold small text-uppercase d-block mb-1">Lorem Ipsum</span>
+                <h1 class="hero-title display-4 my-3">Neque porro quisquam est qui dolorem</h1>
+                <p class="lead text-secondary fw-bold mb-4">Ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt.</p>
+
+                <div class="text-secondary lh-lg small d-none d-lg-block">
+                    <p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur.</p>
+                </div>
+            </div>
+            <div class="col-12 col-lg-7 order-2">
+                <img src="https://placehold.co/1000x600/eeeeee/999999?text=Front+Image" class="img-fluid rounded w-100" alt="Immagine di copertina articolo principale">
+            </div>
+            <div class="col-12 d-lg-none order-3 text-secondary lh-lg mt-3">
+                <p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur.</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="row g-5">
+
+        <div class="col-lg-8 border-end pe-lg-5">
+
+            <section class="mb-5 border-bottom pb-4">
+                <div class="row g-4 align-items-center">
+                    <div class="col-auto">
+                        <img src="https://placehold.co/120x120/f0f0f0/666666?text=Square" class="img-fluid rounded border shadow-sm" style="width: 100px;" alt="">
+                    </div>
+                    <div class="col">
+                        <h2 class="fw-bold h4">Quis autem vel eum iure</h2>
+                        <p class="text-secondary small">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti.</p>
+                    </div>
+                </div>
+            </section>
+
+
+            <section class="mb-5">
+                <div class="row g-4">
+                    <div class="col-lg-6">
+                        <h2 class="fw-bold h4">Temporibus autem quibusdam</h2>
+                        <p class="text-secondary small">Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur.</p>
+                    </div>
+                    <div class="col-lg-6">
+                        <img src="https://placehold.co/800x450/f5f5f5/999999?text=Secondary+Image" class="img-fluid rounded w-100" alt="">
+                    </div>
+                </div>
+            </section>
+
+
+            <section class="mb-5">
+                <div class="row g-4">
+                    <div class="col-lg-6">
+                        <h2 class="fw-bold h4">Temporibus autem quibusdam</h2>
+                        <p class="text-secondary small">Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur.</p>
+                    </div>
+                    <div class="col-lg-6">
+                        <img src="https://placehold.co/800x450/f5f5f5/999999?text=Secondary+Image" class="img-fluid rounded w-100" alt="">
+                    </div>
+                </div>
+            </section>
+
+
+            <section class="mb-5">
+                <div class="row g-4">
+                    <div class="col-lg-6">
+                        <h2 class="fw-bold h4">Temporibus autem quibusdam</h2>
+                        <p class="text-secondary small">Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur.</p>
+                    </div>
+                    <div class="col-lg-6">
+                        <img src="https://placehold.co/800x450/f5f5f5/999999?text=Secondary+Image" class="img-fluid rounded w-100" alt="">
+                    </div>
+                </div>
+            </section>
+
+            <section class="mb-5 border-bottom pb-4">
+                <div class="row g-4 align-items-center">
+                    <div class="col-auto">
+                        <img src="https://placehold.co/120x120/f0f0f0/666666?text=Square" class="img-fluid rounded border shadow-sm" style="width: 100px;" alt="">
+                    </div>
+                    <div class="col">
+                        <h2 class="fw-bold h4">Quis autem vel eum iure</h2>
+                        <p class="text-secondary small">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="mb-5">
+                <div class="row g-4">
+                    <div class="col-lg-6">
+                        <h2 class="fw-bold h4">Temporibus autem quibusdam</h2>
+                        <p class="text-secondary small">Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur.</p>
+                    </div>
+                    <div class="col-lg-6">
+                        <img src="https://placehold.co/800x450/f5f5f5/999999?text=Secondary+Image" class="img-fluid rounded w-100" alt="">
+                    </div>
+                </div>
+            </section>
+
+            <section class="mb-5">
+                <div class="row g-4">
+                    <div class="col-lg-6">
+                        <h2 class="fw-bold h4">Temporibus autem quibusdam</h2>
+                        <p class="text-secondary small">Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur.</p>
+                    </div>
+                    <div class="col-lg-6">
+                        <img src="https://placehold.co/800x450/f5f5f5/999999?text=Secondary+Image" class="img-fluid rounded w-100" alt="">
+                    </div>
+                </div>
+            </section>
+
+            <section class="mb-5">
+                <div class="row g-4">
+                    <div class="col-lg-6">
+                        <h2 class="fw-bold h4">Temporibus autem quibusdam</h2>
+                        <p class="text-secondary small">Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur.</p>
+                    </div>
+                    <div class="col-lg-6">
+                        <img src="https://placehold.co/800x450/f5f5f5/999999?text=Secondary+Image" class="img-fluid rounded w-100" alt="">
+                    </div>
+                </div>
+            </section>
+
+            <section class="mb-5 border-bottom pb-4">
+                <div class="row g-4 align-items-center">
+                    <div class="col-auto">
+                        <img src="https://placehold.co/120x120/f0f0f0/666666?text=Square" class="img-fluid rounded border shadow-sm" style="width: 100px;" alt="">
+                    </div>
+                    <div class="col">
+                        <h2 class="fw-bold h4">Quis autem vel eum iure</h2>
+                        <p class="text-secondary small">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti.</p>
+                    </div>
+                </div>
+            </section>
+
+
+        </div>
+
+
+        <aside class="col-lg-4 ps-lg-5">
+            <h2 class="fw-bold text-uppercase small mb-4 border-bottom pb-2 h5">In evidenza</h2>
+
+            <div class="d-flex align-items-center border-bottom pb-3 mb-3">
+                <div class="flex-grow-1 pe-3">
+                    <h3 class="fw-bold small m-0 lh-sm h6">Vestibulum ante ipsum primis in faucibus orci luctus et ultrices.</h3>
+                </div>
+                <div class="flex-shrink-0">
+                    <img src="https://placehold.co/80x80/f5f5f5/999999?text=1" class="rounded sidebar-thumb" alt="Miniatura articolo 1">
+                </div>
+            </div>
+
+            <div class="d-flex align-items-center border-bottom pb-3 mb-3">
+                <div class="flex-grow-1 pe-3">
+                    <h3 class="fw-bold small m-0 lh-sm h6">Mauris iaculis porttitor posuere. Praesent id metus vitae massa.</h3>
+                </div>
+                <div class="flex-shrink-0">
+                    <img src="https://placehold.co/80x80/f5f5f5/999999?text=2" class="rounded sidebar-thumb" alt="Miniatura articolo 2">
+                </div>
+            </div>
+
+            <h2 class="fw-bold text-uppercase small mt-5 mb-4 border-bottom pb-2 h5">Flashes</h2>
+
+            <div class="d-flex align-items-center mb-3">
+                <div class="flex-grow-1 pe-3">
+                    <h3 class="fw-bold small m-0 lh-sm h6">Donec non enim in turpis pulvinar facilisis.</h3>
+                </div>
+                <div class="flex-shrink-0">
+                    <img src="https://placehold.co/80x80/f5f5f5/999999?text=3" class="rounded sidebar-thumb" alt="Miniatura articolo 3">
+                </div>
+            </div>
+        </aside>
+
+    </div>
+
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/script.js" defer></script>
+
+</body>
+</html>
