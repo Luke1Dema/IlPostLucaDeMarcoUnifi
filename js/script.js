@@ -38,3 +38,8 @@ window.addEventListener('scroll', () => {
 
 window.addEventListener('resize', syncHeaderBehavior, { passive: true });
 syncHeaderBehavior();
+
+document.documentElement.classList.toggle(
+    'touch-device',
+    navigator.maxTouchPoints && navigator.maxTouchPoints > 0
+);
