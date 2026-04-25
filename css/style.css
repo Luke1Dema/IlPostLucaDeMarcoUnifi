@@ -1,4 +1,3 @@
-/* --- STILI GENERALI --- */
 body {
     font-family: 'Georgia', serif;
     margin: 0;
@@ -6,14 +5,12 @@ body {
     transition: padding-top 0.3s;
 }
 
-/* --- HEADER --- */
 .header-wrapper {
     width: 100%;
     background-color: white;
     z-index: 2000;
 }
 
-/* Stato quando l'utente scende con lo scroll */
 .header-scrolled {
     position: fixed;
     top: 0;
@@ -28,7 +25,6 @@ body {
     to { transform: translateY(0); }
 }
 
-/* Nascondi la sub-nav quando l'header è ridotto */
 .header-scrolled .sub-header {
     display: none !important;
 }
@@ -46,7 +42,6 @@ body {
     line-height: 1.1;
 }
 
-/* Classe aggiunta al body via JS per evitare che il contenuto "salti" */
 body.sticky-active {
     padding-top: 70px;
 }
@@ -68,13 +63,13 @@ body.sticky-active {
 }
 
 .badge-abbonati {
-    font-size: 14px !important; /* Aumenta la dimensione per l'accessibilità */
-    letter-spacing: 0.5px;      /* Opzionale: rende il maiuscolo più leggibile */
+    font-size: 14px !important;
+    letter-spacing: 0.5px;
     display: inline-block;
     vertical-align: middle;
 }
 
-/* --- MOBILE: header sempre sticky come ilpost.it --- */
+
 @media (max-width: 991px) {
     .header-wrapper {
         position: fixed;
@@ -85,18 +80,16 @@ body.sticky-active {
         box-shadow: 0 2px 10px rgba(0,0,0,0.08);
     }
 
-    /* spazio per compensare l'header fisso (evita sovrapposizioni) */
+
     body {
         padding-top: 70px;
     }
 
-    /* su mobile nascondiamo le categorie (come già fai) */
     .sub-header {
         display: none !important;
     }
 }
 
-/* Evita che l'immagine "secondaria" diventi enorme in modalità "sito desktop" su mobile/tablet */
 @media (min-width: 992px) and (max-width: 1200px) {
     .secondary-image {
         max-height: 260px;
@@ -104,17 +97,17 @@ body.sticky-active {
     }
 }
 
-/* --- Immagine notizia secondaria: non deve comportarsi come una hero --- */
+
 .secondary-image{
-    aspect-ratio: 16 / 9;   /* mantiene un rapporto stabile */
+    aspect-ratio: 16 / 9;
     object-fit: cover;
-    height: auto;           /* base */
+    height: auto;
 }
 
-/* Su desktop la “tagliamo” un po’ in altezza per evitare l’effetto mega-banner */
+
 @media (min-width: 992px){
     .secondary-image{
-        max-height: 260px;    /* regola questo valore a gusto (220–320 tipicamente) */
+        max-height: 260px;
         width: 100%;
     }
 }
@@ -136,5 +129,27 @@ body.sticky-active {
         height: auto;
         max-height: 260px;
         display: block;
+    }
+}
+
+@media (max-width: 991.98px) and (min-width: 768px) {
+    section.mb-5 > .row.g-4:has(> .col-lg-6 + .col-lg-6) {
+        flex-wrap: nowrap;
+    }
+
+    section.mb-5 > .row.g-4:has(> .col-lg-6 + .col-lg-6) > .col-lg-6 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
+@media (max-width: 767.98px) {
+    section.mb-5 > .row.g-4:has(> .col-lg-6 + .col-lg-6) {
+        flex-wrap: wrap; /* o unset */
+    }
+
+    section.mb-5 > .row.g-4:has(> .col-lg-6 + .col-lg-6) > .col-lg-6 {
+        flex: 0 0 100%;
+        max-width: 100%;
     }
 }

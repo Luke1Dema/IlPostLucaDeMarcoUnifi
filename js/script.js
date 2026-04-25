@@ -1,8 +1,3 @@
-/**
- * Logica per l'header appiccicoso (Sticky Header)
- * - Desktop: come prima (attivo dopo scroll)
- * - Mobile: header sempre fisso via CSS, quindi non usiamo classi "header-scrolled"
- */
 const headerWrapper = document.getElementById('mainHeader');
 const body = document.body;
 
@@ -22,13 +17,11 @@ const handleScrollDesktop = () => {
 
 const syncHeaderBehavior = () => {
     if (isMobile()) {
-        // Mobile: gestione via CSS (header sempre fixed) -> pulizia classi desktop
         headerWrapper.classList.remove('header-scrolled');
         body.classList.remove('sticky-active');
         return;
     }
 
-    // Desktop: usa comportamento originale
     handleScrollDesktop();
 };
 
